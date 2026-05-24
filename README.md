@@ -30,10 +30,17 @@ venv\Scripts\activate
 # On macOS/Linux:
 python -m venv venv
 source venv/bin/activate
+```
 
-**2. Install requirements**
+**2. Install requirements:**
+```bash
 pip install -r requirements.txt
+```
 
 **3. Launch the application:**
+```bash
 python Main.py
+```
+
+*Note: Ensure your ESP32 is connected and set the GUI baud rate to **2,000,000** for successful high-speed communication.*
 
