@@ -41,6 +41,9 @@ pip install -r requirements.txt
 ```bash
 python Main.py
 ```
-
 *Note: Ensure your ESP32 is connected and set the GUI baud rate to **2,000,000** for successful high-speed communication.*
+
+## UI Defaults
+Defaults for the UI can be changed in the **'Utils'** file.
+
 
