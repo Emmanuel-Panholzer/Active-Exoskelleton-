@@ -24,6 +24,7 @@ int servoMaxPulse = 2500;  // 2500us pulse for max degree
 int minAngleServo = 0;
 int maxAngleServo = 180;  // most Servos go up to 180 degree
 int exoMaxAngle = 120;    // the exoskelleton can work between 0-125 degree without hurting the user
+int pulse = 0; // pulse time for the servo angele controll
 
 // Scale the factors to int for cpu easier calculations
 int scaleFactor = 1000;
@@ -225,9 +226,9 @@ void updateServo() {
 
     currentAngleScaled += (targetAngleScaled - currentAngleScaled);
     // Map angle change to controll pulse
-    int pulse = servoMinPulse + ((long long)currentAngleScaled * (servoMaxPulse - servoMinPulse)) / maxAngleServoScaled;
-    servo.writeMicroseconds(pulse);
+    pulse = servoMinPulse + ((long long)currentAngleScaled * (servoMaxPulse - servoMinPulse)) / maxAngleServoScaled;
   }
+  servo.writeMicroseconds(pulse);
 }
 
 // =========================================================
